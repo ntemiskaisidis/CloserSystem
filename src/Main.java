@@ -1,0 +1,52 @@
+import menu.Alkos;
+import menu.Coffes;
+import menu.MenuItem;
+import menu.NonAlko;
+
+import java.math.BigDecimal;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /**
+         * -> Создание обложки объектов для работы
+         * -> Экономия кода с помощью абстрактного класса
+         *
+         */
+        Coffes espresso = new Coffes("hot","1","Espresso",new BigDecimal("2.50"));
+        Coffes capuchino = new Coffes("hot","2","Capucchino",new BigDecimal("4.50"));
+        Coffes freddo = new Coffes("cold","3","Freddoespresso",new BigDecimal("8"));
+        Coffes freddoc = new Coffes("cold","4","Freddocapucchino",new BigDecimal("10"));
+
+        Alkos tequila = new Alkos("0,25ml","1","Tequilla",new BigDecimal("30"));
+        Alkos vodka = new Alkos("0,25ml","2","Vodka",new BigDecimal("15"));
+        Alkos konjak = new Alkos("0,25ml","3","Konjak",new BigDecimal("30"));
+        Alkos wiskey = new Alkos("0,25ml","4","Wiskey",new BigDecimal("45"));
+
+        NonAlko cola = new NonAlko("sweet","1","Cocacolla",new BigDecimal("4"));
+        NonAlko pepsi = new NonAlko("sweet","2","Pepsi",new BigDecimal("4"));
+        NonAlko water = new NonAlko("nonsugar","3","Water",new BigDecimal("2"));
+        NonAlko juice = new NonAlko("sweet","4","Apple juice",new BigDecimal("5"));
+
+        MenuItem.printMenu();
+
+
+        /*
+       -> Проверка всех методов
+       ->
+         */
+        System.out.println(espresso.getId());
+        System.out.println(espresso.getName());
+        espresso.setPrice(new BigDecimal("5"));
+        System.out.println("Espresso costs : " + espresso.getPrice());
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Сделайте заказ");
+        String order = sc.next();
+        System.out.println(order);
+
+
+
+    }
+}
