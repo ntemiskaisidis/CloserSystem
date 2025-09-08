@@ -15,6 +15,11 @@ public abstract class Workers {
         this.tips =tips;
     }
     public String getName () {return name;}
+    public int  getWorkingMonths() {return workingMonths;}
+    public BigDecimal getHourSalary () {return hourSalary;}
+    public BigDecimal getTips () {return tips;  }
+
     public String toString (){return name + " " + workingMonths +  " " + hourSalary + " " + tips;}
+
     }
 
