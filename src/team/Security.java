@@ -11,4 +11,14 @@ public class Security extends Workers {
     }
     public String getTitel () {return titel;}
 
+    public void checkInside() {
+        System.out.println("Perimetr checked");
+
+    }
+    public void helpOutside() {
+        System.out.println("Im here");
+
+
+    }
+
 }

@@ -3,6 +3,7 @@ import menu.Coffes;
 import menu.MenuItem;
 import menu.NonAlko;
 import team.Bar;
+import team.Security;
 
 import java.math.BigDecimal;
 
@@ -15,7 +16,7 @@ public class Main {
          * -> Экономия кода с помощью абстрактного класса
          *
          */
-       /* Coffes espresso = new Coffes("hot","1","Espresso",new BigDecimal("2.50"));
+        Coffes espresso = new Coffes("hot","1","Espresso",new BigDecimal("2.50"));
         Coffes capuchino = new Coffes("hot","2","Capucchino",new BigDecimal("4.50"));
         Coffes freddo = new Coffes("cold","3","Freddoespresso",new BigDecimal("8"));
         Coffes freddoc = new Coffes("cold","4","Freddocapucchino",new BigDecimal("10"));
@@ -30,19 +31,26 @@ public class Main {
         NonAlko water = new NonAlko("nonsugar","3","Water",new BigDecimal("2"));
         NonAlko juice = new NonAlko("sweet","4","Apple juice",new BigDecimal("5"));
 
-        MenuItem.printMenu();
-        */
+        //  MenuItem.printMenu();
+
 
         Bar pascha = new Bar("Chief", "Pascha", 46, new BigDecimal("16.50"),new BigDecimal ("0"));
         Bar nikita = new Bar("co-Chief", "Nikita", 22, new BigDecimal("12.50"),new BigDecimal ("0"));
         Bar valera = new Bar("Runner", "Valera", 12, new BigDecimal("12"),new BigDecimal ("0"));
         Bar danek = new Bar("Barmen", "Danek", 19, new BigDecimal("10"),new BigDecimal ("0"));
 
-        System.out.println(danek.showAll());
+        Security denis  = new Security("Chief", "Denis",36, new BigDecimal("15"), new BigDecimal ("0"));
+        Security louis = new Security("bear", "Louis", 15,new BigDecimal("18"),new BigDecimal ("0"));
+
+        denis.checkInside();
+        denis.helpOutside();
+
+
+        System.out.println(danek.toString());
 
         /*
-       -> Проверка всех методов
-       ->
+        -> Проверка всех методов
+        ->
          */
         /*
         System.out.println(espresso.getId());
