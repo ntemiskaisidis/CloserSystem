@@ -65,9 +65,11 @@ public class Main {
         danek.saleNonAlko(cola);
         nikita.saleAlko(wiskey);
 
+        valera.makeCoffe(capuchino);
 
 
-        System.out.println(danek.toString());
+
+        // System.out.println(danek.toString());
 
         /*
         -> Проверка всех методов

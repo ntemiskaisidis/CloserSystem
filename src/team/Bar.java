@@ -1,5 +1,6 @@
 package team;
 
+import menu.Coffes;
 import menu.NonAlko;
 import menu.Alkos;
 
@@ -9,6 +10,8 @@ public class Bar extends Workers{
     private String titel;
     NonAlko nonAlko;
     Alkos alkos;
+    Coffes coffes;
+
 
 public Bar (String titel,String name,int workingMonths, BigDecimal hourSalary, BigDecimal tips) {
     super(name,workingMonths,hourSalary,tips);
@@ -24,8 +27,11 @@ public Bar (String titel,String name,int workingMonths, BigDecimal hourSalary, B
     public void saleAlko (Alkos alkos) {
         System.out.print("Вашь коктейль: " + alkos.getName());
         System.out.println("C вас : " + alkos.getPrice());
-
     }
+    public void makeCoffe (Coffes coffes ) {
+        System.out.println("Ваш " + coffes.getTyp() + " " + coffes.getName());
+    }
+
 
 
 }
