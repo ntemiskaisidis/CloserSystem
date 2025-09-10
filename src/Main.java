@@ -34,16 +34,37 @@ public class Main {
         //  MenuItem.printMenu();
 
 
-        Bar pascha = new Bar("Chief", "Pascha", 46, new BigDecimal("16.50"),new BigDecimal ("0"));
-        Bar nikita = new Bar("co-Chief", "Nikita", 22, new BigDecimal("12.50"),new BigDecimal ("0"));
-        Bar valera = new Bar("Runner", "Valera", 12, new BigDecimal("12"),new BigDecimal ("0"));
-        Bar danek = new Bar("Barmen", "Danek", 19, new BigDecimal("10"),new BigDecimal ("0"));
+        Bar pascha = new Bar(
+                "Chief", "Pascha", 46, new BigDecimal("16.50"),new BigDecimal ("0")
+        );
 
-        Security denis  = new Security("Chief", "Denis",36, new BigDecimal("15"), new BigDecimal ("0"));
-        Security louis = new Security("bear", "Louis", 15,new BigDecimal("18"),new BigDecimal ("0"));
+        Bar nikita = new Bar(
+                "co-Chief", "Nikita", 22, new BigDecimal("12.50"),new BigDecimal ("0")
+        );
 
-        denis.checkInside();
-        denis.helpOutside();
+        Bar valera = new Bar(
+                "Runner", "Valera", 12, new BigDecimal("12"),new BigDecimal ("0")
+        );
+        Bar danek = new Bar(
+                "Barmen", "Danek", 19, new BigDecimal("10"),new BigDecimal ("0")
+        );
+
+        Security denis  = new Security(
+                "Chief", "Denis",36, new BigDecimal("15"), new BigDecimal ("0")
+        );
+        Security louis = new Security(
+                "bear", "Louis", 15,new BigDecimal("18"),new BigDecimal ("0")
+        );
+
+        // denis.checkInside();
+        // denis.helpOutside();
+        // louis.helpOutside();
+        System.out.println("-------------------");
+        System.out.println();
+
+        danek.saleNonAlko(cola);
+        nikita.saleAlko(wiskey);
+
 
 
         System.out.println(danek.toString());
